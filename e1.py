@@ -3,7 +3,7 @@ import os
 from os import getcwd
 import pandas as pd
 c=getcwd()
-
+st.write(c)
 def save_uploadedfile(uploadedfile):
      with open(os.path.join(c,uploadedfile.name),"wb") as f:
          f.write(uploadedfile.getbuffer())
