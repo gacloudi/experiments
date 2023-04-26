@@ -5,7 +5,7 @@ st.write(f)
 c=getcwd()
 st.write(f.name)
 c1=c + '/' + f.name
-OP='O1.xlsx'
+OP='O1.csv'
 with open(c1,"rb") as file:
                     #st.write(c)
-  st.download_button(label='Download',data=file,file_name=OP,mime="xlsx") 
+  st.download_button(label='Download',data=file,file_name=OP,mime="text/csv") 
