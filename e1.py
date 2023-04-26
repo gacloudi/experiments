@@ -2,6 +2,8 @@ import streamlit as st
 import os
 from os import getcwd
 import pandas as pd
+with open(os.path.join("tempDir",uploadedfile.name),"wb") as f:
+      f.write(uploadedfile.getbuffer())
 
 def save_uploadedfile(uploadedfile):
      with open(os.path.join("tempDir",uploadedfile.name),"wb") as f:
