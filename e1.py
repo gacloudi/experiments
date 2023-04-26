@@ -1,6 +1,11 @@
 import streamlit as st
 from os import getcwd
 import pandas as pd
+
+def save_uploadedfile(uploadedfile):
+     with open(os.path.join("tempDir",uploadedfile.name),"wb") as f:
+         f.write(uploadedfile.getbuffer())
+     return st.success("Saved File:{} to tempDir".format(uploadedfile.name))
 #f=st.file_uploader("Upload a Invoice file")
 datafile = st.file_uploader("Upload CSV",type=['csv'])
 if datafile is not None:
