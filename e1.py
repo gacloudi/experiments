@@ -2,10 +2,10 @@ import streamlit as st
 import os
 from os import getcwd
 import pandas as pd
-
+c=getcwd()
 
 def save_uploadedfile(uploadedfile):
-     with open(os.path.join("tempDir",uploadedfile.name),"wb") as f:
+     with open(os.path.join(c,uploadedfile.name),"wb") as f:
          f.write(uploadedfile.getbuffer())
      return st.success("Saved File:{} to tempDir".format(uploadedfile.name))
 #f=st.file_uploader("Upload a Invoice file")
